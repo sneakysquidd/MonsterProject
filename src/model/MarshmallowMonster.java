@@ -31,8 +31,11 @@ public class MarshmallowMonster
 	
 	public String toString()
 	{
-		String description = "";
-		
+		String description = "This monster is named " + name
+			                   + " and it had " + legCount + " legs "
+			                   +"it has " + eyeCount + " eyes and \n" + "it also has " + armCount + " arms it is " + hasNoses + " that he has a nose"
+			                   +"\nthe monster is spooky and he says Alakazam"
+			                   ;
 		return description;
 	}
 	
