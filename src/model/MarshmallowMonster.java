@@ -2,13 +2,13 @@ package model;
 
 public class MarshmallowMonster
 {
-	//-----Declaration section------
+//-----Declaration section----------------------------------
 	private String name;
 	private double legCount;
 	private int eyeCount;
 	private boolean hasNoses;
 	private int armCount;
-	
+//----------------------------------------------------------	
 	
 	public MarshmallowMonster()
 	{
@@ -24,11 +24,64 @@ public class MarshmallowMonster
 		this.legCount = legCount;
 		this.eyeCount = eyeCount;
 		this.hasNoses = hasNose;
-		this.armCount = arms;
-				
+		this.armCount = arms;			
 	}
 	
+//------------Getter-----------------------------------------
+	public String getName()
+	{
+		return name;
+	}
 	
+	public double getlegCount()
+	{
+		return legCount;
+	}
+	
+	public int geteyeCount()
+	{
+		return eyeCount;
+	}
+
+	public boolean gethasNoses()
+	{
+		return hasNoses;
+	}
+	
+	public int getarmCount()
+	{
+		return armCount;
+	}
+//-----------------------------------------------------------	
+	
+//------------Setter-----------------------------------------
+	public void setName(String name)
+	{
+		this.name = name;
+	}
+	
+	public void setlegCount(Double legCount)
+	{
+		this.legCount = legCount;
+	}
+	
+	public void seteyeCount(int eyeCount)
+	{
+		this.eyeCount = eyeCount;
+	}
+	
+	public void sethasNoses(boolean hasNoses)
+	{
+		this.hasNoses = hasNoses;
+	}
+	
+	public void setarmCount(int armCount)
+	{
+		this.armCount = armCount;
+	}
+//-----------------------------------------------------------	
+	
+//-----Prints at end of program says features of monster-----
 	public String toString()
 	{
 		String description = "This monster is named " + name
@@ -40,3 +93,4 @@ public class MarshmallowMonster
 	}
 	
 }
+//-----------------------------------------------------------
