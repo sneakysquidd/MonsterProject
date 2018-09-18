@@ -88,15 +88,15 @@ public class Controller
 	
 		
 //-----------------------------If Block Spooky Saying------------------------------------------------------------
-		String Answer = JOptionPane.showInputDialog(null, "Does your monster say something spooky?");
-		if (Answer.startsWith("y"))
+		String userAnswer = JOptionPane.showInputDialog(null, "Does your monster say something spooky?");
+		if (userAnswer.startsWith("y"))
 		{
-			String SpookyAnswer = JOptionPane.showInputDialog(null, "What does your monster say?");		
-			userMonster.setSpooky(SpookyAnswer);
+			String userInputPhrase = JOptionPane.showInputDialog(null, "What does your monster say?");		
+			userMonster.setPhrase(userInputPhrase);
 		}
 		else
 		{
-			JOptionPane.showInputDialog(null, "Your monster dum lol");
+			JOptionPane.showInputDialog(null, "Your monster is dum lol");
 		}
 		
 		
@@ -104,8 +104,8 @@ public class Controller
 		JOptionPane.showMessageDialog(null, "This monster is named " + userInputName + 
 				" and it had " + legs + " legs \n" + 
 				"it has " + eyes + " eyes and " + "it also has " + arms + " arms it is " + nose + " that he has a nose" + 
-				" the monster is spooky and he says " + Spooky);
-		
+				" the monster is spooky and he says " + userMonster.getPhrase() );
+	
 	}
 	public boolean validInt(String maybeInt)
 	{

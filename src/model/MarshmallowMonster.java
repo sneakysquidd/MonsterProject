@@ -8,7 +8,7 @@ public class MarshmallowMonster
 	private int eyeCount;
 	private boolean hasNoses;
 	private int armCount;
-	private String Spooky;
+	private String Phrase;
 //----------------------------------------------------------	
 	
 	public MarshmallowMonster()
@@ -19,14 +19,14 @@ public class MarshmallowMonster
 	}
 	
 	
-	public MarshmallowMonster(String name, double legCount, int eyeCount, boolean hasNose, int arms, String Spooky)
+	public MarshmallowMonster(String name, double legCount, int eyeCount, boolean hasNose, int arms, String Phrase)
 	{
 		this.name = name;
 		this.legCount = legCount;
 		this.eyeCount = eyeCount;
 		this.hasNoses = hasNose;
 		this.armCount = arms;		
-		this.Spooky = Spooky;
+		this.Phrase = Phrase;
 	}
 	
 //------------Getter-----------------------------------------
@@ -55,9 +55,9 @@ public class MarshmallowMonster
 		return armCount;
 	}
 	
-	public String getSpooky()
+	public String getPhrase()
 	{
-		return Spooky;
+		return Phrase;
 	}
 //-----------------------------------------------------------	
 	
@@ -87,9 +87,9 @@ public class MarshmallowMonster
 		this.armCount = armCount;
 	}
 	
-	public void setSpooky(String Spooky)
+	public void setPhrase(String Phrase)
 	{
-		this.Spooky = Spooky;
+		this.Phrase = Phrase;
 	}
 //-----------------------------------------------------------	
 	
@@ -99,7 +99,7 @@ public class MarshmallowMonster
 		String description = "This monster is named " + name
 			                   + " and it had " + legCount + " legs "
 			                   +"it has " + eyeCount + " eyes and \n" + "it also has " + armCount + " arms it is " + hasNoses + " that he has a nose"
-			                   +"\nthe monster is spooky and he says Alakazam"
+			                   +"\nthe monster is spooky and he says Alakazam" + Phrase
 			                   ;
 		return description;
 	}
