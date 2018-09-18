@@ -14,7 +14,7 @@ public class Controller
 	//Constructors initialize data members!
 	public Controller()
 	{
-		myMonster = new MarshmallowMonster("0", 0.33, 4, false, 2);
+		myMonster = new MarshmallowMonster("0", 0.33, 4, false, 2, "h");
 		userMonster = new MarshmallowMonster();
 		//inputScanner = new Scanner(System.in);
 	}
@@ -28,8 +28,12 @@ public class Controller
 		//JOptionPane.showMessageDialog(null, "What is the monster's name?");
 		//String name = inputScanner.nextLine();
 		
+//------------------------Name Section---------------------------------------------------------------------------
+		
 		String userInputName = JOptionPane.showInputDialog(null, "What is the monster's name");		
 		userMonster.setName(userInputName);
+		
+//------------------------Leg Section----------------------------------------------------------------------------
 		
 		//System.out.println("how many legs does the monster have?");
 		String userInputLegs = JOptionPane.showInputDialog(null, "How many legs does the monster have?");
@@ -40,7 +44,12 @@ public class Controller
 		}
 		//Double legCount = inputScanner.nextDouble();
 		userMonster.setlegCount(legs);
+		
+//---------------------------------------------------------------------------------------------------------------
 	
+		
+//------------------------Arm Section----------------------------------------------------------------------------		
+		
 		//System.out.println("how many arms does the monster have?");
 		String userInputArms = JOptionPane.showInputDialog(null, "How many arms does the monster have?");
 		int arms = -99;
@@ -51,6 +60,9 @@ public class Controller
 		//int armCount = inputScanner.nextInt();
 		userMonster.setarmCount(arms);
 		
+		
+		
+//------------------------Eye Section----------------------------------------------------------------------------		
 		//System.out.println("how many eyes does the monster have?");
 		//int eyeCount = inputScanner.nextInt();
 		String userInputEyes = JOptionPane.showInputDialog(null, "How many eyes does the monster have?");
@@ -60,7 +72,11 @@ public class Controller
 			eyes = Integer.parseInt(userInputEyes);
 		}
 		userMonster.seteyeCount(eyes);
+	
+//---------------------------------------------------------------------------------------------------------------
+	
 		
+//-----------------------Nose Section----------------------------------------------------------------------------
 		//System.out.println("Does the monster have a nose?");
 		//boolean hasNoses = inputScanner.nextBoolean();
 		String userInputNose = JOptionPane.showInputDialog(null, "Is it true or false that the monster has a nose?");
@@ -68,11 +84,27 @@ public class Controller
 		
 		userMonster.sethasNoses(nose);	
 
+//---------------------------------------------------------------------------------------------------------------		
+	
 		
+//-----------------------------If Block Spooky Saying------------------------------------------------------------
+		String Answer = JOptionPane.showInputDialog(null, "Does your monster say something spooky?");
+		if (Answer.startsWith("y"))
+		{
+			String SpookyAnswer = JOptionPane.showInputDialog(null, "What does your monster say?");		
+			userMonster.setSpooky(SpookyAnswer);
+		}
+		else
+		{
+			JOptionPane.showInputDialog(null, "Your monster dum lol");
+		}
+		
+		
+//--------------------Prints Monster's Attributes-----------------------------------------------------------------
 		JOptionPane.showMessageDialog(null, "This monster is named " + userInputName + 
 				" and it had " + legs + " legs \n" + 
 				"it has " + eyes + " eyes and " + "it also has " + arms + " arms it is " + nose + " that he has a nose" + 
-				" the monster is spooky and he says Alakazam");
+				" the monster is spooky and he says " + Spooky);
 		
 	}
 	public boolean validInt(String maybeInt)
@@ -107,6 +139,8 @@ public class Controller
 		
 		return isValid;
 	
+
+		
 	}
 }
 

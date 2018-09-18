@@ -8,6 +8,7 @@ public class MarshmallowMonster
 	private int eyeCount;
 	private boolean hasNoses;
 	private int armCount;
+	private String Spooky;
 //----------------------------------------------------------	
 	
 	public MarshmallowMonster()
@@ -18,13 +19,14 @@ public class MarshmallowMonster
 	}
 	
 	
-	public MarshmallowMonster(String name, double legCount, int eyeCount, boolean hasNose, int arms)
+	public MarshmallowMonster(String name, double legCount, int eyeCount, boolean hasNose, int arms, String Spooky)
 	{
 		this.name = name;
 		this.legCount = legCount;
 		this.eyeCount = eyeCount;
 		this.hasNoses = hasNose;
-		this.armCount = arms;			
+		this.armCount = arms;		
+		this.Spooky = Spooky;
 	}
 	
 //------------Getter-----------------------------------------
@@ -52,6 +54,11 @@ public class MarshmallowMonster
 	{
 		return armCount;
 	}
+	
+	public String getSpooky()
+	{
+		return Spooky;
+	}
 //-----------------------------------------------------------	
 	
 //------------Setter-----------------------------------------
@@ -78,6 +85,11 @@ public class MarshmallowMonster
 	public void setarmCount(int armCount)
 	{
 		this.armCount = armCount;
+	}
+	
+	public void setSpooky(String Spooky)
+	{
+		this.Spooky = Spooky;
 	}
 //-----------------------------------------------------------	
 	
